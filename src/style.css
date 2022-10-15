@@ -1,3 +1,68 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* bai-jamjuree-regular - latin */
+@font-face {
+font-family: 'Bai Jamjuree';
+font-style: normal;
+font-weight: 400;
+src: url('./assets/fonts/bai-jamjuree-v11-latin-regular.eot'); /* IE9 Compat Modes */
+src: local(''),
+        url('./assets/fonts/bai-jamjuree-v11-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+        url('./assets/fonts/bai-jamjuree-v11-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+        url('./assets/fonts/bai-jamjuree-v11-latin-regular.woff') format('woff'), /* Modern Browsers */
+        url('./assets/fonts/bai-jamjuree-v11-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+}
+/* bai-jamjuree-600 - latin */
+@font-face {
+font-family: 'Bai Jamjuree';
+font-style: normal;
+font-weight: 600;
+src: url('./assets/fonts/bai-jamjuree-v11-latin-600.eot'); /* IE9 Compat Modes */
+src: local(''),
+        url('./assets/fonts/bai-jamjuree-v11-latin-600.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+        url('./assets/fonts/bai-jamjuree-v11-latin-600.woff2') format('woff2'), /* Super Modern Browsers */
+        url('./assets/fonts/bai-jamjuree-v11-latin-600.woff') format('woff'), /* Modern Browsers */
+        url('./assets/fonts/bai-jamjuree-v11-latin-600.ttf') format('truetype'), /* Safari, Android, iOS */
+}
+
+@layer base{
+        h3{
+                @apply mb-8 text-4xl font-bold text-darkGrayishBlue md:text-5xl;
+        }   
+        h5{
+                @apply text-2xl mb-2 font-bold text-darkGrayishBlue;
+        }
+}
+
+.section-container{
+        @apply max-w-6xl mx-auto text-center px-10;
+}
+
+.section-content{
+        @apply max-w-3xl mx-auto leading-9 text-center text-grayishBlue;
+}
+
+.button-container{
+        @apply flex flex-col justify-center w-full space-y-6 text-xl text-white md:flex-row md:space-y-0 md:space-x-4;
+}
+
+
+body{
+        background-image: url(./assets/images/bg-header-desktop.png);
+        background-repeat:no-repeat;
+        background-size: contain;
+}
+
+@media only screen and (max-width: 576px){
+        body{
+                background-image: url(./assets/images/bg-header-mobile.png);
+                background-repeat:no-repeat;
+                background-size: contain;
+        }       
+}
+
+.ficon:hover{
+        filter: invert(53%) sepia(66%) saturate(434%) hue-rotate(121deg) brightness(101%) contrast(94%);
+}

@@ -2,12 +2,11 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 
 module.exports = {
-	mode: 'production',
+	mode: 'development',
 	entry: './src/index.js',
 	output: {
 		path: path.resolve(__dirname,'dist'),
 		filename:'bundle.js',
-		clean:true,
 	},
 	devServer: {
 		watchFiles: ["src/**/*"],
@@ -35,7 +34,7 @@ module.exports = {
 				test: /\.(woff|woff2|eot|ttf)$/i,
 				type: "asset/resource",
 				generator: {
-					filename: "assets/fonts/[hash][ext][query]"
+					filename: "assets/fonts/[name][ext][query]"
 				}
 			}
 		],
